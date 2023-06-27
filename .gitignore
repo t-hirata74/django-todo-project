@@ -19,4 +19,4 @@ pip-selfcheck.json
 
 .vscode
 djangoTodoProject/**/__pycache__
-djangoTodoProject/**/db.sqlite3
+djangoTodoProject/db.sqlite3
