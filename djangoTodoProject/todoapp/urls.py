@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import TaskCreate, TaskList, TaskDetail, TaskUpdate
+from .views import TaskCreate, TaskList, TaskDetail, TaskUpdate, TaskDelete
 
 urlpatterns = [
     path("", TaskList.as_view(), name="tasks"),
@@ -8,4 +8,5 @@ urlpatterns = [
          name="task"),  # <int:pk>は動的パス, pkはプライマリーキー
     path("create-task/", TaskCreate.as_view(), name="create-task"),
     path("edit-task/<int:pk>/", TaskUpdate.as_view(), name="edit-task"),
+    path("delete-task/<int:pk>/", TaskDelete.as_view(), name="delete-task"),
 ]
