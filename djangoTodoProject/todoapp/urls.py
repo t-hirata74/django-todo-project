@@ -4,5 +4,6 @@ from .views import TaskList, TaskDetail
 
 urlpatterns = [
     path("", TaskList.as_view()),
-    path("task/<int:pk>/", TaskDetail.as_view())  # <int:pk>は動的パス, pkはプライマリーキー
+    path("task/<int:pk>/", TaskDetail.as_view(),
+         name="task")  # <int:pk>は動的パス, pkはプライマリーキー
 ]
