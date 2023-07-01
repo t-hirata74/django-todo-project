@@ -23,5 +23,6 @@ class TaskDetail(DetailView):
 
 class TaskCreate(CreateView):
     model = Task
-    fields = "__all"  # modelsのtaskのfieldを一括で宣言できる
-    success_url = reverse_lazy("tasks")  # urlsのtasksにルートされる
+    fields = "__all__"  # modelsのtaskのfieldを一括で宣言できる
+    # urlsのtasksにルートされる, クラスベースビューの際はリバースレイジー
+    success_url = reverse_lazy("tasks")
