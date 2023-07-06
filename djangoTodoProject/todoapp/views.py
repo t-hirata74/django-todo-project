@@ -38,9 +38,14 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
-    fields = "__all__"  # modelsのtaskのfieldを一括で宣言できる
+    fields = ["title", "description", "completed"]
     # urlsのtasksにルートされる, クラスベースビューの際はリバースレイジー(更新後にtasksにリダイレクト)
     success_url = reverse_lazy("tasks")
+
+    # formに投稿できるログインユーザーのみに制御する
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
