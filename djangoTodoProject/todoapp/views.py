@@ -20,6 +20,16 @@ class TaskList(LoginRequiredMixin, ListView):
     context_object_name = "tasks"
     # redirect_field_name = "login"
 
+    # ListViewを持った関数をオーバーライドする
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # print(context)
+
+        # ユーザーが持ったタスクでフィルタリング
+        context["tasks"] = context["tasks"].filter(
+            user=self.request.user)  # userはmodel.pyで定義したやつ
+        return context
+
 
 class TaskDetail(LoginRequiredMixin, DetailView):
     model = Task
