@@ -48,7 +48,7 @@ class TaskDelete(LoginRequiredMixin, DeleteView):
     context_object_name = "task"
 
 
-class TaskListLoginView(LoginRequiredMixin, LoginView):
+class TaskListLoginView(LoginView):
     fields = "__all__"
     template_name = "todoapp/login.html"
 
