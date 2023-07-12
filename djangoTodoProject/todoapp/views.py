@@ -76,3 +76,9 @@ class RegisterTodoApp(FormView):
     template_name = "todoapp/register.html"
     form_class = UserCreationForm
     success_url = reverse_lazy("tasks")
+
+    def form_valid(self, form):
+        user = form.save()
+        if user is not None:
+            login(self.request, user)
+        return super().form_valid(form)
