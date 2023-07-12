@@ -29,6 +29,16 @@ class TaskList(LoginRequiredMixin, ListView):
         # ユーザーが持ったタスクでフィルタリング
         context["tasks"] = context["tasks"].filter(
             user=self.request.user)  # userはmodel.pyで定義したやつ
+
+        searchInputText = self.request.GET.get("search") or ""  # searchの情報を取得
+        # print(searchInputText)
+
+        if searchInputText:
+            context["tasks"] = context["tasks"].filter(
+                title__startswith=searchInputText)
+
+        context["search"] = searchInputText
+
         return context
 
 
