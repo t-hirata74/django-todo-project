@@ -28,3 +28,11 @@ h1 {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(117,117,241,1) 35%, rgba(94,136,244,1) 48%, rgba(45,175,250,1) 75%, rgba(0,212,255,1) 100%);
   color: white;
 }
+
+.taskWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid #4646466a;
+}
