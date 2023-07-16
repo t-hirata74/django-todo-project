@@ -103,3 +103,8 @@ h1 {
   background-color: lightseagreen;
   color: white;
 }
+
+.addButton {
+  font-size: 32px;
+  color: lightseagreen;
+}
