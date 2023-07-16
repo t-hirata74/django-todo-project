@@ -117,3 +117,12 @@ input[type="text"],
 textarea {
   width: 100%;
 }
+
+.accountWrapper {
+  padding: 20px;
+}
+
+.accountWrapper p {
+  margin: 0px;
+  padding: 0px;
+}
