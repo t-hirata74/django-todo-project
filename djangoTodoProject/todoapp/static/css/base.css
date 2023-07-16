@@ -36,3 +36,22 @@ h1 {
   padding: 20px;
   border-top: 1px solid #4646466a;
 }
+
+.taskTitle {
+  display: flex;
+  align-items: center;
+}
+
+.taskCompletedIcon {
+  height: 20px;
+  width: 20px;
+  background-color: lightgreen;
+  border-radius: 50%;
+}
+
+.taskInCompletedIcon {
+  height: 20px;
+  width: 20px;
+  background-color: #595959;
+  border-radius: 50%;
+}

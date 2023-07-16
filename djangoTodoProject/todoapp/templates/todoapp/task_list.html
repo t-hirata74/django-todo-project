@@ -33,6 +33,7 @@
     <!-- タスク完了 -->
     {% if task.completed %}
     <div class="taskTitle">
+      <div class="taskCompletedIcon"></div>
       <s><a href="{% url 'task' task.id %}">{{task}}</a></s>
     </div>
     <a href="{% url 'edit-task' task.id %}" class="deleteButton">編集</a>
@@ -40,6 +41,7 @@
     {% else %}
     <!-- タスク未完了 -->
     <div class="taskTitle">
+      <div class="taskInCompletedIcon"></div>
       <a href="{% url 'task' task.id %}">{{task}}</a>
     </div>
     <a href="{% url 'edit-task' task.id %}" class="deleteButton">編集</a>
