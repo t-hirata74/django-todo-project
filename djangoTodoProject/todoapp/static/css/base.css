@@ -55,3 +55,19 @@ h1 {
   background-color: #595959;
   border-radius: 50%;
 }
+
+.loginAndLogout {
+  padding: 20px;
+}
+
+.loginAndLogout a {
+  color: lightcoral;
+}
+
+.editButton {
+  color: #3a873a
+}
+
+.deleteButton {
+  color: red;
+}
