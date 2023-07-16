@@ -85,7 +85,7 @@ h1 {
   border: 1px solid lightseagreen;
   border-radius: 5px;
   padding: 2px 4px;
-  width: 160px;
+  width: 160px !important;
 }
 
 .searchButton {
@@ -107,4 +107,13 @@ h1 {
 .addButton {
   font-size: 32px;
   color: lightseagreen;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
 }
